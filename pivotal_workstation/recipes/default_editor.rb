@@ -1,9 +1,11 @@
-include_recipe "pivotal_workstation::textmate"
+#include_recipe "pivotal_workstation::textmate"
+include_recipe "pivotal_workstation::sublime_text"
 
-# This sets TextMate to be the default editor for
+# This sets SublimeText2 to be the default editor for
 # .xml, .rb, .erb, .plain-text, .yml, .yaml
 #ls_handler_role_all="com.macromates.textmate"
-ls_handler_role_all="com.macromates.textmate"
+#ls_handler_role_all="com.macromates.textmate"
+ls_handler_role_all="com.sublimetext.2"
 gem_package("plist")
 
 plist_file = "#{ENV['HOME']}/Library/Preferences/com.apple.LaunchServices.plist"
